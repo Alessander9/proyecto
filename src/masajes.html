@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LUNA Spa - Servicios de Masajes</title>
+  <!-- Enlaza el CSS generado por Tailwind (dist/output.css) -->
+  <link rel="stylesheet" href="output.css" />
+  
+  <!-- Estilos personalizados para animaciones -->
+  <style>
+    /* Efecto Snap */
+    .snap {
+      animation: snap-effect 0.3s forwards;
+    }
+    @keyframes snap-effect {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    /* Estilo para los dots activos (si los usas) */
+    .active-dot {
+      background-color: #9282ec; /* Color destacado para el dot activo */
+    }
+  </style>
+</head>
+<body class="bg-[#fbf8ff] text-[#221d38]">
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="bg-[#0d0718] shadow">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo o Nombre del Spa -->
+        <div>
+          <a href="index.html" class="text-[#fbf8ff] text-2xl font-bold">LUNA Spa</a>
+        </div>
+        <!-- Enlaces de Navegación -->
+        <div class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-[#fbf8ff] hover:text-[#9282ec] transition-colors">Inicio</a>
+          <a href="#services" class="text-[#fbf8ff] hover:text-[#9282ec] transition-colors">Servicios</a>
+          <a href="#contact" class="text-[#fbf8ff] hover:text-[#9282ec] transition-colors">Contacto</a>
+        </div>
+        <!-- Menú Mobile -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-[#fbf8ff] focus:outline-none">
+            <!-- Icono de menú (hamburguesa) -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Menú Mobile -->
+      <div id="mobile-menu" class="hidden md:hidden space-y-2">
+        <a href="index.html" class="block py-2 text-[#fbf8ff] hover:text-[#9282ec]">Inicio</a>
+        <a href="#services" class="block py-2 text-[#fbf8ff] hover:text-[#9282ec]">Servicios</a>
+        <a href="#contact" class="block py-2 text-[#fbf8ff] hover:text-[#9282ec]">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
+  <main class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold text-center text-[#221d38] mb-6">Servicios de Masajes</h2>
+    <p class="text-center text-lg text-[#221d38]">
+      En <strong class="text-[#9282ec]">LUNA Spa</strong> te ofrecemos una amplia variedad de masajes para atender tus necesidades de relajación y bienestar:
+    </p>
+    <ul class="list-disc list-inside mt-4 mb-6 text-lg space-y-2">
+      <li>Masaje relajante</li>
+      <li>Masaje terapéutico</li>
+      <li>Masaje con piedras calientes</li>
+      <li>Masaje deportivo</li>
+      <li>Masaje de tejido profundo</li>
+      <li>Masaje tailandés</li>
+      <li>Reflexología podal</li>
+      <li>Masaje para embarazadas</li>
+    </ul>
+
+    <p class="text-center text-lg mb-6">
+      Cada uno de estos masajes tiene un costo base desde <strong class="text-[#9282ec]">S/ 120.00</strong>, dependiendo de la duración y la técnica utilizada. 
+      ¡Contáctanos para más información o para reservar tu cita!
+    </p>
+
+    <!-- Imagen Principal -->
+    <div class="flex justify-center">
+      <img 
+        src="../fotos/1.jpg" 
+        alt="Imagen de masajes en un spa" 
+        class="w-full max-w-2xl rounded-md shadow-md object-cover h-96"
+      />
+    </div>
+
+    <!-- Nuevas Imágenes Agregadas en Tarjetas Uniformes -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Tarjeta 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="h-64 w-full">
+          <img 
+            src="../fotos/3.jpg" 
+            alt="Masaje Relajante" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-4">
+          <h4 class="text-xl font-semibold text-center text-[#221d38]">Masaje Relajante</h4>
+          <p class="mt-2 text-center text-[#221d38]">Disfruta de un masaje que alivia el estrés y mejora la circulación.</p>
+        </div>
+      </div>
+      <!-- Tarjeta 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="h-64 w-full">
+          <img 
+            src="../fotos/2.jpg" 
+            alt="Masaje Terapéutico" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-4">
+          <h4 class="text-xl font-semibold text-center text-[#221d38]">Masaje Terapéutico</h4>
+          <p class="mt-2 text-center text-[#221d38]">Ideal para tratar dolores musculares y mejorar la movilidad.</p>
+        </div>
+      </div>
+      <!-- Tarjeta 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="h-64 w-full">
+          <img 
+            src="../fotos/4.jpg" 
+            alt="Masaje con Piedras Calientes" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-4">
+          <h4 class="text-xl font-semibold text-center text-[#221d38]">Masaje con Piedras Calientes</h4>
+          <p class="mt-2 text-center text-[#221d38]">Combina el calor de las piedras para una relajación profunda.</p>
+        </div>
+      </div>
+   
+
+    <!-- Botón para Volver al Inicio -->
+    <div class="flex justify-center mt-8">
+      <a href="index.html" class="bg-[#9282ec] text-[#fbf8ff] py-2 px-6 rounded-full font-semibold hover:bg-[#fbf8ff] hover:text-[#221d38] transition-colors shadow-lg service-link">
+        Volver al Inicio
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0d0718] text-[#fbf8ff] py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-2">Av. Siempre Viva 123, Lima, Perú</p>
+      <p class="mb-2">+51 999 888 777</p>
+      <p class="mb-4">contacto@lunaspa.pe</p>
+      <p>
+        © <span id="year"></span> LUNA Spa. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JS para la Navbar y el Efecto Snap -->
+  <script>
+    // Actualiza el año en el footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Configuración del menú mobile
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Efecto Snap en las tarjetas de servicios
+    const serviceLinks = document.querySelectorAll('.service-link');
+
+    serviceLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevenir la redirección inmediata
+        const href = link.getAttribute('href');
+
+        // Añadir clase 'snap' para iniciar la animación
+        link.classList.add('snap');
+
+        // Esperar a que termine la animación antes de redirigir
+        link.addEventListener('animationend', () => {
+          window.location.href = href;
+        }, { once: true }); // Asegurarse de que el listener se ejecute solo una vez
+      });
+    });
+  </script>
+</body>
+</html>
